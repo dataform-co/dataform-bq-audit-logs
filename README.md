@@ -38,4 +38,4 @@ This output of this package is the following data model (configurable as tables 
 
 One row for every query log sent from BigQuery to stackdriver. The schema of this table is significantly simplified as compared to the raw logs table!
 
-![]("https://assets.dataform.co/docs/packages/bq-audit-logs/bq-audit-logs-dag.png?profile=WebP)
+<img src="https://assets.dataform.co/docs/packages/bq-audit-logs/bq-audit-logs-dag.png" />
