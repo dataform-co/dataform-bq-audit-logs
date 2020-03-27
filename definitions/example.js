@@ -9,7 +9,7 @@ const bigQueryLogsModels = bigQueryLogs({
 });
 
 // Override the sessions and user table type to "table".
-bigQueryLogsModels.bigQueryComputeLogs.type("table").config({
+bigQueryLogsModels.bigQueryComputeLogs.type("view").config({
   bigQuery: {
     partitionBy: "date(timestamp)"
   }

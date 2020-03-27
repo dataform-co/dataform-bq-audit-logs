@@ -3,7 +3,7 @@ const bigQueryComputeLogs = require("./includes/bigquery_compute_logs");
 module.exports = (params) => {
 
  params = {
-    logsSchema: "javascript", // schema that Segment writes tables into
+    logsSchema: null, // schema that the audit logs are written into
     ...params
   };
 
@@ -12,7 +12,7 @@ module.exports = (params) => {
     logsSchema
   } = params;
   
-  // Declare the source segment tables.
+  // Declare the source table
   const logsRaw = declare({
     ...defaultConfig,
     schema: logsSchema,
