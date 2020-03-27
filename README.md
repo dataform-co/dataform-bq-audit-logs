@@ -1,5 +1,3 @@
-# dataform-bq-audit-logs
-
 This package creates a simple dataset to aid analysis of BigQuery usage logs.
 
 To set up BigQuery audit data logging, follow the instructions [here](https://cloud.google.com/bigquery/docs/reference/auditlogs#stackdriver_logging_exports).
