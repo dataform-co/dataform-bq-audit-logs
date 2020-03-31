@@ -12,7 +12,7 @@ Add the package to your `package.json` file in your Dataform project. You can fi
 
 ## Configure the package
 
-Create a new JS file in your `definitions/` folder and create the segment tables with the following example:
+Create a new JS file in your `definitions/` folder and create the BigQuery table with the following snippet:
 
 ```js
 const bigQueryLogs = require("dataform-bigquery-logs");
