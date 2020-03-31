@@ -2,6 +2,8 @@ This package creates a simple dataset to aid analysis of BigQuery usage logs.
 
 To set up BigQuery audit data logging, follow the instructions [here](https://dataform.co/blog/exporting-bigquery-usage-logs).
 
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/fdfa25dcdc8544e38fe844199b970f87" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
 ## Supported warehouses
 
 - BigQuery
