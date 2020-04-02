@@ -34,7 +34,7 @@ select
     ) as int64
   ) billed_bytes
 from
-  ${ctx.ref(params.logsSchema, "cloudaudit_googleapis_com_data_access_*")}
+  ${ctx.ref(params.logsSchema, params.logsTableName)}
 where
   resource.type = 'bigquery_project' -- compute (vs. 'bigquery_dataset' = storage)
 )
