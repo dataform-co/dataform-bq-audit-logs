@@ -4,19 +4,21 @@ module.exports = (params) => {
 
  params = {
     logsSchema: null, // schema that the audit logs are written into
+    logsTableName: 'cloudaudit_googleapis_com_data_access*', // schema that the audit logs are written into
     ...params
   };
 
   const {
     defaultConfig,
-    logsSchema
+    logsSchema,
+    logsTableName
   } = params;
   
   // Declare the source table
   const logsRaw = declare({
     ...defaultConfig,
     schema: logsSchema,
-    name: "cloudaudit_googleapis_com_data_access_*"
+    name: logsTableName
   });
 
   // Publish and return datasets.
