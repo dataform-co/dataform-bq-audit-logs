@@ -3,6 +3,7 @@ const bigQueryComputeLogs = require("./includes/bigquery_compute_logs");
 module.exports = (params) => {
 
  params = {
+    logsDatabase: null,
     logsSchema: null, // schema that the audit logs are written into
     logsTableName: 'cloudaudit_googleapis_com_data_access*', // schema that the audit logs are written into
     ...params
@@ -10,6 +11,7 @@ module.exports = (params) => {
 
   const {
     defaultConfig,
+    logsDatabase,
     logsSchema,
     logsTableName
   } = params;
@@ -17,6 +19,7 @@ module.exports = (params) => {
   // Declare the source table
   const logsRaw = declare({
     ...defaultConfig,
+    database: logsDatabase,
     schema: logsSchema,
     name: logsTableName
   });
