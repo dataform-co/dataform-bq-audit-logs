@@ -47,18 +47,18 @@ select
     case
     when statement_type = 'SELECT' then "INTERACTIVE"
     else concat(
-           split(substr(destination_table, length(CONCAT("projects/","${session.config.defaultDatabase}", "/datasets/"))+1), "/tables/")[safe_offset(0)],
+           split(substr(destination_table, length(CONCAT("projects/","${dataform.projectConfig.defaultDatabase}", "/datasets/"))+1), "/tables/")[safe_offset(0)],
            ".",
-           split(substr(destination_table, length(CONCAT("projects/","${session.config.defaultDatabase}", "/datasets/"))+1), "/tables/")[safe_offset(1)]
+           split(substr(destination_table, length(CONCAT("projects/","${dataform.projectConfig.defaultDatabase}", "/datasets/"))+1), "/tables/")[safe_offset(1)]
     )
   end as destination_table_full,
   case
     when statement_type = 'SELECT' then "INTERACTIVE"
-    else split(substr(destination_table, length(CONCAT("projects/","${session.config.defaultDatabase}", "/datasets/"))+1), "/tables/")[safe_offset(0)]
+    else split(substr(destination_table, length(CONCAT("projects/","${dataform.projectConfig.defaultDatabase}", "/datasets/"))+1), "/tables/")[safe_offset(0)]
   end as destination_schema,
         case
     when statement_type = 'SELECT' then "INTERACTIVE"
-    else split(substr(destination_table, length(CONCAT("projects/","${session.config.defaultDatabase}", "/datasets/"))+1), "/tables/")[safe_offset(1)]
+    else split(substr(destination_table, length(CONCAT("projects/","${dataform.projectConfig.defaultDatabase}", "/datasets/"))+1), "/tables/")[safe_offset(1)]
   end as destination_table,
   query,
   billed_bytes,
