@@ -1,3 +1,9 @@
+
+**** NOTE: This package was created before the "Jobs" information schema tables were available in BigQuery. ****
+**** We recommended that you use the information schema tables instead of this package                      ****
+**** Learn more: https://cloud.google.com/bigquery/docs/information-schema-jobs                             ****
+
+
 This package creates a simple dataset to aid analysis of BigQuery usage logs.
 
 To set up BigQuery audit data logging, follow the instructions [here](https://dataform.co/blog/exporting-bigquery-usage-logs).
