@@ -1,6 +1,6 @@
 {
     "name": "dataform-bq-audit-logs",
     "dependencies": {
-        "@dataform/core": "1.13.0"
+        "@dataform/core": "2.6.0"
     }
 }
